@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sobre Mim</title>
+  <meta name="description" content="Portfólio do Mikey | Dz"/>
+  <style>
+    :root{
+      --bg:#061025;
+      --card:#0e1724;
+      --muted:#9fb0c8;
+      --accent:#68b2ff;
+      --glass: rgba(255,255,255,0.02);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      background:linear-gradient(180deg,#041024 0%, #061025 100%);
+      color:#eaf4ff;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      padding:28px;
+      line-height:1.6;
+    }
+    .wrap{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 340px;gap:20px}
+    @media (max-width:980px){ .wrap{grid-template-columns:1fr} }
+    .panel{
+      background:linear-gradient(180deg, rgba(255,255,255,0.015), rgba(255,255,255,0.01));
+      padding:20px;border-radius:12px;border:1px solid rgba(255,255,255,0.03);
+    }
+    .intro{
+      font-size:18px;
+      padding:18px;
+      border-radius:10px;
+      background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.007));
+      border:1px solid rgba(255,255,255,0.02);
+    }
+    .name{
+      display:flex;align-items:center;gap:14px;margin-bottom:14px;
+    }
+    .avatar{
+      width:86px;height:86px;border-radius:14px;background:var(--glass);display:flex;align-items:center;justify-content:center;font-weight:800;color:var(--accent);font-size:30px;border:1px solid rgba(255,255,255,0.03)
+    }
+    .main-title{font-size:24px;font-weight:800;margin:0;color:#dff0ff}
+    .subtext{color:var(--muted);margin-top:6px;font-size:14px}
+    .muted{color:var(--muted)}
+    .chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+    .chip{background:rgba(255,255,255,0.02);padding:6px 10px;border-radius:999px;font-size:13px;color:var(--muted);border:1px solid rgba(255,255,255,0.02)}
+    .projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px;margin-top:16px}
+    .project{
+      background:var(--card);padding:14px;border-radius:10px;border:1px solid rgba(255,255,255,0.03);display:flex;flex-direction:column;gap:8px;min-height:140px;
+    }
+    .project .p-title{font-weight:700;color:#e8f8ff}
+    .project .p-desc{color:var(--muted);font-size:14px;flex:1}
+    .project .p-meta{display:flex;gap:8px;align-items:center;margin-top:8px;flex-wrap:wrap}
+    .tag{background:rgba(255,255,255,0.02);padding:6px 8px;border-radius:8px;color:var(--muted);font-size:12px;border:1px solid rgba(255,255,255,0.02)}
+    .btn{background:transparent;border:1px solid rgba(255,255,255,0.05);color:var(--accent);padding:8px 12px;border-radius:8px;text-decoration:none;font-weight:700;font-size:13px}
+    .contact{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+    footer{margin-top:18px;color:var(--muted);font-size:13px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+    details{background:rgba(255,255,255,0.01);padding:8px;border-radius:8px;border:1px solid rgba(255,255,255,0.02)}
+    .big{font-size:16px;color:#dff6ff}
+    .contact-list {margin-top: 16px;}
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 12px;
+      padding: 10px;
+      background: rgba(255,255,255,0.01);
+      border-radius: 8px;
+      border: 1px solid rgba(255,255,255,0.02);
+      transition: all 0.2s ease;
+    }
+    .contact-item:hover {
+      background: rgba(255,255,255,0.02);
+      border-color: rgba(255,255,255,0.05);
+    }
+    .contact-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255,255,255,0.03);
+      font-weight: bold;
+      color: var(--accent);
+    }
+    .contact-info {
+      flex: 1;
+    }
+    .contact-name {
+      font-weight: 600;
+      color: #e8f8ff;
+      font-size: 14px;
+    }
+    .contact-value {
+      color: var(--muted);
+      font-size: 13px;
+      margin-top: 2px;
+    }
+    .contact-link {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+    .contact-link:hover .contact-name {
+      color: var(--accent);
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="panel">
+      <div class="name">
+        <div class="avatar" aria-hidden="true">DZ</div>
+        <div>
+          <div class="main-title">Eduardo — pode me chamar de Dz ou Mikey</div>
+          <div class="subtext">Programador (Java & JavaScript). Trabalho principalmente criando scripts/recursos para Dragon Block C (Minecraft 1.7.10). Tenho ~1 ano mexendo com JavaScript.</div>
+          <div class="chips" aria-hidden="true">
+            <div class="chip">Dragon Block C (1.7.10)</div>
+            <div class="chip">JavaScript</div>
+            <div class="chip">Java</div>
+            <div class="chip">Plugins / Scripts</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="intro">
+        <div class="big"><strong>Apresentação</strong></div>
+        <p style="margin-top:10px">
+          Oi, eu sou o Eduardo — mas normalmente uso Dz ou Mikey. Estou começando na área de criação de mods e plugins para Minecraft; me considero um otimo Desenvolvedor de JavaScripts, tenho alguns projetos voltados ao Dragon Block C, Todos ou quase todos meus projetos sao voltados ao Dragon Block C!
+        </p>
+
+        <p>
+          Gosto de criar JavaScripts para Dragon Block C por um motivo, O mod esta abandonado a anos e eu quero "revolucionalo" do meu jeito! Com novas mecanicas, sistemas etc!
+        </p>
+
+        <p>
+          Eu foco em funcionalidades que realmente ajudam a complementar o mod como: teleporte configurável, bancos de TP, lojas dentro do jogo, NPCs que vendem itens/transformações entre outras coisas. Abaixo aparecem alguns exemplos dos meus projetos com descrições detalhadas do que cada um faz.
+        </p>
+
+        <div style="margin-top:12px" class="muted">Quer ver o código? Meu GitHub: <a class="btn" href="https://github.com/BlackDzrlk" target="_blank" rel="noopener">github.com/BlackDzrlk</a></div>
+      </div>
+
+      <div style="margin-top:16px" class="big"><strong>Projetos (descrições detalhadas)</strong></div>
+
+      <div class="projects" id="projects">
+        <article class="project">
+          <div class="p-title">Custom Master</div>
+          <div class="p-desc">
+            Este é um Script para Dragon Block C que consiste em voce criar um NPC com um certo nome e ja vai funcionar automaticamente. O NPC funciona como um vendedor de Formas — ou seja, ele permite que jogadores comprem formas específicas oferecidas pelo servidor. A ideia é fazer algo diferente do Dragon Block C convencional, enquanto no DBC normal vc clica no "V" e pode upar a super form (liberando no max umas 7 ou 8 formas, com esse script voce pode colocar uma variedade absurda de formas como o SSJ5 que e algo que todos sempre queriam no jogo e nunca foi adicionado! Nesse script alem de poder adicionar a forma que quiser voce pode tambem alterar o preço cobrado por essa forma [ o valor e cobrado em TP do comprador]
+            <br><br>
+            Funcionalidades principais: Um NPC que vende forms por TP (training points)
+          </div>
+          <div class="p-meta">
+            <span class="tag">JavaScript</span>
+            <span class="tag">NPC</span>
+            <span class="tag">Vendas / Custom</span>
+            <a class="btn" href="#" onclick="alert('Link para o projeto Custom Master será adicionado em breve')">Ver Projeto</a>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="p-title">Warps (comando .warps)</div>
+          <div class="p-desc">
+            Este é um Script para Dragon Block C que adiciona o comando ".warps" ao seu jogo seja offline ou online. Com esse comando, jogadores podem ver uma lista de warps e teletransportar-se para diversos locais do mundo. A configuração é simples: você define os locais, nomes e o comando passa a oferecer essas opções no jogo.
+            <br><br>
+            O diferencial: tudo é totalmente configurável — nome do warp, coordenadas e possibilidade de criar warps rápidos (como um .kami que te leva direto para o kami) para áreas especiais do servidor.
+          </div>
+          <div class="p-meta">
+            <span class="tag">JavaScript</span>
+            <span class="tag">Comando [.warps]</span>
+            <span class="tag">Configuração fácil</span>
+            <a class="btn" href="#" onclick="alert('Link para o projeto Warps será adicionado em breve')">Ver Projeto</a>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="p-title">Bank TP</div>
+          <div class="p-desc">
+            Este é um Script que adiciona um sistema de banco de TP e uma Lojinha ao Dragon Block C. Com esse sistema, jogadores podem:
+            <ul style="margin:8px 0 8px 18px;color:var(--muted)">
+              <li>depositar TP;</li>
+              <li>sacar TP;</li>
+              <li>transferir TP entre Players;</li>
+              <li>aumentar o limite máximo de TP que um jogador pode ter armazenado no Banco.</li>
+            </ul>
+            Junto ao sistema de banco há uma loja integrada onde os jogadores podem comprar efeitos e itens: Marca Majin, Ki Divino, Ki Lendário, Senzu e Carne de Dinossauro, entre outros itens que você queira disponibilizar. A loja é ligada ao banco: compras descontam o TP ou outra moeda configurada.
+          </div>
+          <div class="p-meta">
+            <span class="tag">JavaScript</span>
+            <span class="tag">Banco de TP</span>
+            <span class="tag">Loja integrada</span>
+            <a class="btn" href="#" onclick="alert('Link para o projeto Bank TP será adicionado em breve')">Ver Projeto</a>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="p-title">Custom Races|Custom Effects</div>
+          <div class="p-desc">
+            Em desenvolvimento
+          </div>
+          <div class="p-meta">
+            <span class="tag">JavaScript</span>
+            <span class="tag">Eventos</span>
+            <span class="tag">Admin</span>
+            <a class="btn" href="#" onclick="alert('Link para o projeto Custom Races será adicionado em breve')">Ver Projeto</a>
+          </div>
+        </article>
+      </div>
+
+    </div>
+
+    <div class="panel">
+      <div style="font-weight:800;font-size:18px;color:#e8f8ff">Informações</div>
+      <div style="margin-top:8px" class="muted">
+        - Nome: Eduardo (Dz / Mikey).<br>
+        - Área: scripts/plugins/mods para Dragon Block C (Minecraft 1.7.10).<br>
+        - Nível: iniciante em criação de mods - plugins e um bom Desenvolvedor de Scripts ou JavaScripts.<br>
+        - Tempo mexendo com JavaScript: ~1 ano.
+      </div>
+
+      <div class="contact-list">
+        <div style="font-weight:800;font-size:18px;color:#e8f8ff;margin-top:24px">Contato</div>
+        <div style="margin-top:8px;margin-bottom:16px" class="muted">
+          Entre em contato comigo através dos canais abaixo:
+        </div>
+        
+        <a href="https://discord.gg/5XPFFkjjJU" target="_blank" rel="noopener" class="contact-link">
+          <div class="contact-item">
+            <div class="contact-icon">D</div>
+            <div class="contact-info">
+              <div class="contact-name">Discord</div>
+              <div class="contact-value">https://discord.gg/5XPFFkjjJU</div>
+            </div>
+          </div>
+        </a>
+        
+        <a href="https://www.instagram.com/o.dz.dev?igsh=MWk5c292bW8xMTh4ZQ==" target="_blank" rel="noopener" class="contact-link">
+          <div class="contact-item">
+            <div class="contact-icon">IG</div>
+            <div class="contact-info">
+              <div class="contact-name">Instagram</div>
+              <div class="contact-value">@o.dz.dev</div>
+            </div>
+          </div>
+        </a>
+        
+        <a href="https://wa.me/5522981636278" target="_blank" rel="noopener" class="contact-link">
+          <div class="contact-item">
+            <div class="contact-icon">W</div>
+            <div class="contact-info">
+              <div class="contact-name">WhatsApp</div>
+              <div class="contact-value">(22) 98163-6278</div>
+            </div>
+          </div>
+        </a>
+      </div>
+      
+      <div style="margin-top:24px; padding:12px; background:rgba(255,255,255,0.01); border-radius:8px; border:1px solid rgba(255,255,255,0.02);">
+        <div style="font-weight:600;color:#e8f8ff;margin-bottom:6px">Disponibilidade</div>
+        <div style="font-size:13px;color:var(--muted)">
+          Disponível para colaborações, projetos personalizados e dúvidas sobre Dragon Block C. Respondo mais rapidamente pelo Discord.
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</body>
+</html>
